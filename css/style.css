@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+/* font */
+/* Exo 2, Noto Sans KR */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+/* reset */
+* { margin: 0; padding: 0; letter-spacing: -1px; } 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { margin: 0; padding: 0; } 
+a { text-decoration: none; color: inherit; } 
+li { list-style: none; } 
+a img { border: none; } 
+body {font-family: 맑은고딕;}
+/* 오렌지 버튼 */
+.orBtn { display: block;
+ padding: 1px 40px;
+ line-height: 30px; font-size: 14px; background-color: #fa691c; text-align: center; border-top-left-radius: 30px; border-top-right-radius: 0; border-bottom-left-radius: 30px; border-bottom-right-radius: 40px; transition: .5s; } 
+.orBtn:hover { background-color: #d83d00; } 
+/* layout */
+#wrap { width: 100%; } 
+/* ==============================
+ ** header **
+============================== */
+#wrap header { width: 100%; height: 100px; background-color: #051120; position: fixed; top: 0; left: 0; z-index: 4; } 
+#wrap header .headerInner { width: 1400px; height: 100%; margin: 0 auto;
+ display: flex; justify-content: space-between; align-items: center; color: #fff; font-family: 'Exo 2'; } 
+#wrap header .headerInner nav.gnb ul { display: flex; width: 600px; justify-content: space-between; } 
+#wrap header .headerInner nav.gnb ul li a { font-size: 20px; font-weight: bold; display: block; } 
+#wrap header .headerInner nav.gnb ul li a:hover,
+#wrap header .headerInner nav.gnb ul li a:focus { color: #fa691c; } 
+/* ==============================
+ ** section(main) **
+============================== */
+#wrap section.main { width: 100%; height: 1080px; background: url(../images/mainVisualBG.jpg) no-repeat center/cover;
+ background-attachment: fixed;
+ position: relative; min-width: 1400px; } 
+#wrap section.main .mainTitle { color: #fff; text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+ text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); z-index: 2; font-family: 'Noto Sans KR'; } 
+#wrap section.main .mainTitle h2 { white-space: nowrap; font-size: 47px; margin-bottom: 100px; font-weight: normal;}
+#wrap section.main .mainTitle p { font-size: 25px; margin-bottom: 30px; } 
+#wrap section.main .mainTitle a.view { display: block; width: 180px; padding: 8px 0; font-size: 16px; margin: 0 auto; border: 2px solid white; border-radius: 50px; overflow: hidden; position: relative; } 
+#wrap section.main .mainTitle a.view::before { content: ""; width: 0; height: 100%; background-color: rgba(255, 255, 255, 0); position: absolute; left: 0; top: 0; transition: .3s; } 
+#wrap section.main .mainTitle a.view:hover::before { content: ""; width: 100%; background-color: rgba(255, 255, 255, 0.2); } 
+#wrap section.main .mainTitle a.view i { margin-left: 5px; } 
+#wrap section.main .ani { width: 900px; height: 350px; position: relative; z-index: 1; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#wrap section.main .ani .round { position: absolute; top: 10%; left: 93%; width: 10px; height: 10px; background-color: #fff; border-radius: 50%; transform: translate(-50%, -50%); animation: dot 2s linear infinite;}
+@keyframes dot { 
+ 0% { width: 10px; height: 10px; opacity: 0.3; } 
+ 50% { width: 50px; height: 50px; opacity: 0.2; } 
+ 100% { width: 100px; height: 100px; opacity: 0; } 
+ }
+/* ==============================
+ ** title **
+============================== */
+.title { font-family: 'Exo 2'; text-align: center; color: #000; } 
+.title h2 { font-size: 45px; font-weight: 500; margin-bottom: 10px; } 
+.title h2 span { color: #fa691c; } 
+.title p { font-family: 'Noto Sans KR'; color: #555; font-size: 18px; } 
+/* ==============================
+ ** section(about) **
+============================== */
+#wrap section.about { width: 100%; height: 680px; background-color: #fff; position: relative; padding: 100px 0; min-width: 1400px; } 
+#wrap section.about .aboutInner { width: 1400px; height: 100%; margin: 0 auto; /* border: 1px solid red; */}
+#wrap section.about .aboutInner ul { display: flex; justify-content: space-between; margin-top: 60px; width: 100%;}
+#wrap section.about .aboutInner ul li { width: 455px; } 
+#wrap section.about .aboutInner ul li a { display: block; } 
+/* ======= img ======= */
+#wrap section.about .aboutInner ul li a .scale { width: 455px; height: 370px; overflow: hidden; } 
+#wrap section.about .aboutInner ul li a .scale img { width: 100%; height: 100%; transition: .8s; } 
+#wrap section.about .aboutInner ul li a:hover p.scale img { transform: scale(1.2);}
+/* ======= text ======= */
+#wrap section.about .text { margin-top: 30px; font-family: 'Noto Sans KR'; } 
+#wrap section.about .text h3 { font-size: 20px; margin-bottom: 10px; font-weight: bold; } 
+#wrap section.about .text p { font-size: 16px; margin-bottom: 30px; font-weight: normal; } 
+#wrap section.about .text .more { padding-left: 40px; font-weight: bold; font-size: 16px; position: relative; font-family: 'Exo 2'; } 
+#wrap section.about .text .more:hover { color: rgba(0,0,0,0.7); } 
+#wrap section.about .text .more::before { content: '\f178'; color: #fff; font-family: FontAwesome; font-size: 25px; width: 30px; height: 30px; line-height: 30px; background-color: #fa691c; border-radius: 50%; position: absolute; left: 1px; top: -4px; overflow: hidden; } 
+/* ==============================
+ ** section(innovation) **
+============================== */
+#wrap section.innovation { width: 100%; height: 750px; background-color: #fff; position: relative; padding: 100px 0; min-width: 1400px; } 
+#wrap section.innovation .innovationInner { width: 1400px; height: 100%; margin: 0 auto;}
+/* ======= img ======= */
+#wrap section.innovation .innovationInner .imgBox { width: 100%; height: 540px; background: url(../images/product_1.jpg) no-repeat center/cover; margin-top: 60px; position: relative; } 
+/* ======= txt box(흰) ======= */
+#wrap section.innovation .innovationInner .imgBox .inner { width: 80%; box-shadow: 10px 10px 20px rgba(0,0,0,0.25); left: 50%; bottom: -50px; position: absolute; transform: translateX(-50%); } 
+#wrap section.innovation .innovationInner .imgBox .inner h3 { font-size: 24px; padding: 25px 35px; background-color: #fff; font-family: 'Exo 2'; font-weight: 500; } 
+#wrap section.innovation .innovationInner .imgBox .inner h3 span { color: #fa691c; font-family: 'Exo 2'; font-weight: 600; } 
+/* ======= txt box(회) ======= */
+#wrap section.innovation .innovationInner .imgBox .inner .bottom { background-color: #3A3C4E; padding: 35px 70px 35px 70px; color: #fff; display: flex; justify-content: space-between; align-items: center; font-family: 'Noto Sans KR'; font-weight: 500; } 
+#wrap section.innovation .innovationInner .imgBox .inner .bottom p { font-size: 15px; line-height: 1.6; } 
+/* ==============================
+ ** section(me) **
+============================== */
+#wrap section.me { width: 100%; height: 800px; background: url(../images/section-me.bg.jpg)
+ no-repeat center/cover; position: relative; padding: 100px 0; min-width: 1400px; } 
+#wrap section.me .meInner { width: 1400px; height: 100%; margin: 0 auto;}
+#wrap section.me .meInner .list { width: 100%; margin-top: 60px; border-top: 2px solid #000; font-family: 'Noto Sans KR'; } 
+#wrap section.me .meInner .list h3 { font-size: 20px; font-weight: bold; } 
+#wrap section.me .meInner .list p { font-size: 15px; font-weight: normal; line-height: 1.6; margin-bottom: 20px; } 
+#wrap section.me .meInner .list>ul>li { padding: 30px 30px 50px 25px;}
+#wrap section.me .meInner .list>ul>li h3 { position: relative; margin: 20px 0; font-size: 18px; } 
+#wrap section.me .meInner .list>ul>li h3>span { color: #fa691c; position: absolute; left: -25px; } 
+#wrap section.me .meInner .list>ul>li a.more { font-weight: bold; position: relative; font-family: 'Exo 2'; } 
+#wrap section.me .meInner .list>ul>li a.more:hover { opacity: 0.7; } 
+/* ======= 화살표 아이콘 ======= */
+#wrap section.me .meInner .list>ul>li a.more i { color: #fa691c; font-size: 14px; margin-left: 5px; top: 4px; position: absolute; } 
+/* ======= 인재상 상세 리스트 ======= */
+#wrap section.me .meInner .list ul.in li { display: flex; margin-bottom: 10px; } 
+#wrap section.me .meInner .list ul.in li em { width: 12%; } 
+#wrap section.me .meInner .list ul.in li p { width: 88%; position: relative; } 
+#wrap section.me .meInner .list ul.in li p::before { position: absolute; content: ""; width: 4px; height: 4px; background-color: #fa691c; left: -47px; top: 12px; } 
+/* ======= 채용 버튼 ======= */
+#wrap section.me .meInner .button { width: 200px; position: absolute; left: 50%; bottom: 100px; transform: translateX(-50%); } 
+#wrap section.me .meInner .button a { color: #fff; font-family: 'Noto Sans KR'; font-weight: 500; } 
+/* ==============================
+ ** section(sns) **
+============================== */
+#wrap section.sns { width: 100%; height: 690px; padding: 100px 0; background-color: #fff; min-width: 1400px; } 
+#wrap section.sns .snsInner { width: 1400px; height: 100%; margin: 0 auto;}
+#wrap section.sns .snsInner ul { width: 100%; height: 520px; display: flex; justify-content: space-between; margin-top: 60px; } 
+/* ======= img ======= */
+#wrap section.sns .snsInner ul li a { display: block; width: 100%; height: 520px;}
+#wrap section.sns .snsInner ul li a p.ani { overflow: hidden; width: 455px; height: 370px; position: relative; z-index: 3; } 
+#wrap section.sns .snsInner ul li a p.ani img { width: 100%; height: 100%; } 
+#wrap section.sns .snsInner ul li a p.ani::before { content: ""; width: 100%; height: 0; transition: .5s; background-color: rgba(255,135,66,0.8); position: absolute; left: 0; top: 0; } 
+#wrap section.sns .snsInner ul li a:hover p.ani::before { height: 100%; } 
+/* ======= blog 글씨 ======= */
+#wrap section.sns .snsInner ul li a p.ani::after { content: "BLOG"; font-family: 'Exo 2'; color: #fff; font-size: 15px; padding: 5px 30px; border-radius: 50px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); border: 1px solid #fff; transition: .5s; opacity: 0; } 
+#wrap section.sns .snsInner ul li a:hover p.ani::after { opacity: 1; } 
+/* ======= txt ======= */
+#wrap section.sns .snsInner ul li a .snsBottom { font-family: 'Noto Sans KR'; width: 100%; padding: 30px 0 20px 0; } 
+#wrap section.sns .snsInner ul li a .snsBottom p { font-weight: bold; font-size: 20px; } 
+#wrap section.sns .snsInner ul li a .snsBottom p.color { color: #fa691c; font-weight: normal; margin-bottom: 10px; font-size: 16px; } 
+#wrap section.sns .snsInner ul li a .snsBottom p.time { margin-top: 30px; color: #aaa; font-size: 16px; position: relative; padding-left: 20px; } 
+#wrap section.sns .snsInner ul li a .snsBottom p.time::before { content: "\f017"; font-family: FontAwesome; font-size: 15px; position: absolute; left: 1px; top: 4px; } 
+/* ==============================
+ ** footer **
+============================== */
+#wrap footer { width: 100%; height: 120px; background-color: #ececec; min-width: 1400px; } 
+#wrap footer .footerInner { width: 1400px; height: 100%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-family: 'Noto Sans KR'; position: relative; } 
+#wrap footer .footerInner ul { display: flex; gap: 20px; color: #4B4A4A; font-size: 16px; } 
+#wrap footer .footerInner ul strong { color: #fa691c; } 
+#wrap footer .footerInner ul li a:hover,
+#wrap footer .footerInner .copyright a:hover { text-decoration: underline; } 
+#wrap footer .footerInner .copyright { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #8B8B8B; font-size: 18px; } 
